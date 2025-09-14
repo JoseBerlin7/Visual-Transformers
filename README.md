@@ -41,6 +41,8 @@ The ViT model follows the standard architecture:
 .
 ├── ViT.py           # Main implementation (PatchEmbedding, MHSA, TransformerBlock, ViT)
 
+├── rough notebooks           # Notebooks used during the development and testing process of each modules for convinient implementation of ViT
+
 ├── test
 
     ├── mnist_vit_test.py           # testing ViT model with MNIST dataset
