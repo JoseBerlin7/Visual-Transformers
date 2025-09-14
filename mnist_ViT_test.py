@@ -82,3 +82,7 @@ class MNIST_model_test():
             if val_acc > best_acc:
                 best_acc = val_acc
         print(f"Best Model Accuracy: {best_acc*100:.2f}%")
+
+if __name__ == "__main__":
+    tester = MNIST_model_test()
+    tester.main()
