@@ -130,10 +130,10 @@ Compare against CNN baselines.
 
 Implement hybrid models (CNN + ViT).
 
-## Acknowledgements
+## Citation
 
-Original ViT paper: An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale 
+If you use or reference this repository, please cite the original paper:
 
-    (Citation: https://doi.org/10.48550/arXiv.2010.11929)
-
-PyTorch team for providing an excellent deep learning framework.
+Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., ... & Houlsby, N. (2020). 
+An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale. 
+arXiv preprint arXiv:2010.11929. https://doi.org/10.48550/arXiv.2010.11929
