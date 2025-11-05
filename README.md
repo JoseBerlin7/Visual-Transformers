@@ -38,35 +38,39 @@ The ViT model follows the standard architecture:
 5. Classification Head: Linear layer on the final [cls] token output.
 
 ## Code Structure
-.
-├── ViT.py           # Main implementation (PatchEmbedding, MHSA, TransformerBlock, ViT)
 
-├── rough notebooks           # Notebooks used during the development and testing process of each modules for convinient implementation of ViT
-
-├── test
-
-    ├── mnist_vit_test.py           # testing ViT model with MNIST dataset
-  
-├── README.md        # Project documentation
-
-└── requirements.txt # Dependencies (PyTorch, etc.)
+    .
+    ├── ViT.py           # Main implementation (PatchEmbedding, MHSA, TransformerBlock, ViT)
+    
+    ├── rough notebooks           # Notebooks used during the development and testing process of each modules for convinient implementation of ViT
+    
+    ├── test
+    
+        ├── mnist_vit_test.py           # testing ViT model with MNIST dataset
+      
+    ├── README.md        # Project documentation
+    
+    └── requirements.txt # Dependencies (PyTorch, etc.)
 
 ## Getting Started
 1. Clone the Repository
-'''bash
-git clone https://github.com/<your-username>/vision-transformer.git
-cd vision-transformer
-'''
+   
+        '''bash
+        git clone https://github.com/<your-username>/vision-transformer.git
+        cd vision-transformer
+        '''
 
 3. Install Dependencies
-'''bash
-pip install torch torchvision
-'''
+   
+        '''bash
+        pip install torch torchvision
+        '''
 
 
 Creating a virtual environment before installing would be suggested
 
 3. Usage
+   
         ''' CODE
         
         # Example: Training on MNIST-like data (28x28 grayscale images)
@@ -88,16 +92,17 @@ Creating a virtual environment before installing would be suggested
         logits = model(dummy_input)
 
 
-print("Output shape:", logits.shape)   # [8, 10]
-'''
+        print("Output shape:", logits.shape)   # [8, 10]
+        '''
 
 4. Extract Attention Maps
-      '''CODE
    
-        logits, attn_maps = model(dummy_input, return_all_attention=True)
-        print(len(attn_maps))   # number of transformer blocks
-        print(attn_maps[0].shape)  # shape: [batch_size, num_heads, num_tokens, num_tokens]
-      '''
+          '''CODE
+       
+            logits, attn_maps = model(dummy_input, return_all_attention=True)
+            print(len(attn_maps))   # number of transformer blocks
+            print(attn_maps[0].shape)  # shape: [batch_size, num_heads, num_tokens, num_tokens]
+          '''
 ## Hyperparameters
 
 n_channels: Channels of input image (default: 1 set for B&W images).
